@@ -61,7 +61,7 @@ function(
     pitchoffset : ('pitchoffset' in fields) ? fields.pitchoffset : 0,
     rolloffset  : ('rolloffset' in fields)  ? fields.rolloffset  : 0,
     pano        : ('pano' in fields)        ? fields.pano        : null,
-    heading     : ('heading' in fields)     ? Number(fields.heading)     : null
+    heading     : ('heading' in fields)     ? Number(fields.heading)     : 197.711206651874
   };
 
   // *** initialize the StreetView module

@@ -61,6 +61,8 @@ function(config, L, validate, Stapes, GMaps, sv_svc) {
       this.pov = null;
       this.mode = config.display.mode;
       this.zoom = config.display.zoom;
+      this.heading = config.display.heading;
+      this.pitch = config.display.pitch;
       this.fov_table = this.SV_HFOV_TABLES[this.mode];
       this.hfov = this.fov_table[this.zoom];
       this.vfov = null;
@@ -95,10 +97,12 @@ function(config, L, validate, Stapes, GMaps, sv_svc) {
       };
 
       // *** options for the streetview object
+      var lat= new GMaps.LatLng(config.display.lat, config.display.long);
       var svOptions = {
         visible: true,
         disableDefaultUI: true,
-        scrollwheel: false
+        scrollwheel: false,
+        position: lat
       };
 
       // *** only show links on the master display
@@ -120,8 +124,8 @@ function(config, L, validate, Stapes, GMaps, sv_svc) {
 
       // *** init streetview pov
       this.streetview.setPov({
-        heading: 0,
-        pitch: 0,
+        heading: this.heading,
+        pitch: this.pitch,
         zoom: this.zoom
       });
 

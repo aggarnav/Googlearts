@@ -20,9 +20,13 @@
     "show_activities": true
   },
   "display": {
-    "default_pano": "ZphZajKeR_lJjBJftY0SYw",
+ "default_pano": "EGzupBpL7Fcfm4qg0c3flA",
     "zoom": 3,
     "mode": "html4",
-    "show_links": true
+    "show_links": true,
+    "heading": 0,
+    "pitch": 0,
+    "lat": 41.4039206,
+    "long": 2.1752476000000343
   }
 }
